@@ -2,7 +2,7 @@
  *
  * <kem.c>
  *
- * @version 1.0 (September 2017)
+ * @version 1.0.1 (July 2018)
  *
  * Reference ISO-C99 Implementation of LEDAkem cipher" using GCC built-ins.
  *
@@ -85,11 +85,15 @@ int crypto_kem_dec( unsigned char *ss,
                     const unsigned char *ct,
                     const unsigned char *sk )
 {
-
-
    DIGIT decoded_error_vector[N0*NUM_DIGITS_GF2X_ELEMENT];
    DIGIT mockup_error_vector[N0*NUM_DIGITS_GF2X_ELEMENT];
    memcpy(mockup_error_vector, ct, NUM_DIGITS_GF2X_ELEMENT*DIGIT_SIZE_B);
+   /* adding the prng seed to the final hash in case of decryption failure
+    * to address the official comment by Keita Xagawa */
+   memcpy(mockup_error_vector+NUM_DIGITS_GF2X_ELEMENT, 
+          ((privateKeyNiederreiter_t *)sk)->prng_seed, 
+           NUM_DIGITS_GF2X_ELEMENT > TRNG_BYTE_LENGTH ? TRNG_BYTE_LENGTH : 
+                                                       NUM_DIGITS_GF2X_ELEMENT);
 
    int decode_ok = decrypt_niederreiter(decoded_error_vector,
                                         (privateKeyNiederreiter_t *)sk,

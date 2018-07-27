@@ -2,7 +2,7 @@
  *
  * <niederreiter_decrypt.c>
  *
- * @version 1.0 (September 2017)
+ * @version 1.0.1 (July 2018)
  *
  * Reference ISO-C99 Implementation of LEDAkem cipher" using GCC built-ins.
  *
@@ -96,6 +96,12 @@ int decrypt_niederreiter(DIGIT err[],            // N0 circ poly
    memset(err, 0x00, N0*NUM_DIGITS_GF2X_ELEMENT*DIGIT_SIZE_B);
    decryptOk = bf_decoding(err, (const POSITION_T (*)[DV]) HtrPosOnes,
                            (const POSITION_T (*)[M]) QtrPosOnes, privateSyndrome);
+
+   int err_weight = 0;
+   for (int i =0 ;i < N0; i++){
+       err_weight += population_count(err+(NUM_DIGITS_GF2X_ELEMENT*i));
+   }
+   decryptOk = decryptOk && (err_weight == NUM_ERRORS_T);
    return decryptOk;
 } // end decrypt_niederreiter
 

@@ -1,0 +1,19 @@
+Version 1.0.1 (tag v1.0.1)
+
+* Added the secret key to the hash which generates the pseudorandom value
+  for the encapsulated secret in case of decoding failure. This addresses 
+  the official comment made by Keita Xagawa about the OW-CPA of the scheme.
+
+* Added explicit count of the error vector weight. Decoding an error with
+  a different weight from the expected one (t) always results in a decryption
+  failure.
+  Prevents trivial reaction attacks which forge messages with a number of errors
+  (slightly) higher than the specification.
+
+* Workaround for an apparent mistranslation of the code in the Clang/LLVM compilation
+  toolchain of macOS Sierra 16.6.0, pointed out by Jacob Alperin-Sheriff.
+
+----------------------------
+Version 1.0 (tag v1.0)
+
+* Original submission to NIST
