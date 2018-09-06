@@ -2,7 +2,7 @@
  *
  * <bf_decoding.c>
  *
- * @version 1.0 (September 2017)
+ * @version 1.0.2 (September 2018)
  *
  * Reference ISO-C99 Implementation of LEDAkem cipher" using GCC built-ins.
  *
@@ -84,7 +84,7 @@ int bf_decoding(DIGIT out[], // N0 polynomials
             int correlation =0;
 
             for (int blockIdx = 0; blockIdx < N0; blockIdx++) {
-               endQblockIdx += qBlockWeights[i][blockIdx];
+               endQblockIdx += qBlockWeights[blockIdx][i];
                for (; currQoneIdx < endQblockIdx; currQoneIdx++) {
                   currQ_pos[currQoneIdx] = ((QtrPosOnes[i][currQoneIdx]+j) % P) + blockIdx*P;
                   correlation += upc[currQ_pos[currQoneIdx]];

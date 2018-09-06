@@ -56,7 +56,7 @@ endif
   CFLAGS = -DCATEGORY=$(SL) -DN0=$(N0) -DCPU_WORD_BITS=64 \
            -std=c99 -Wall -pedantic -Wmaybe-uninitialized -Wuninitialized \
 	   -march=native -O3
-  LDFLAGS = -lm 
+  LDFLAGS =  
   INCLUDES = -I./include
   SRCDIR = library
   OBJDIR = bin

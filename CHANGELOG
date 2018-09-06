@@ -1,3 +1,13 @@
+Version 1.0.2 (tag v1.0.2)
+
+* Fixed decoding bug, unelicited by submission parameters.
+
+* Fixed sparse multiplication bug, unelicited by submission parameters.
+
+* Added forced zero filling for the memory area which subsequently holds 
+  the data to be hashed whenever a decoding failure takes place.
+
+----------------------------
 Version 1.0.1 (tag v1.0.1)
 
 * Added the secret key to the hash which generates the pseudorandom value
