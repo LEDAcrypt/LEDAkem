@@ -1,6 +1,6 @@
 /**
  *
- * <gf2x_limbs.h.c>
+ * <gf2x_limbs.h>
  *
  * @version 1.0 (September 2017)
  *

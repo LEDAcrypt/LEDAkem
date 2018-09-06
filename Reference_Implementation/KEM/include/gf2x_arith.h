@@ -89,3 +89,4 @@ int gf2x_cmp(const unsigned lenA, const DIGIT A[],
              const unsigned lenB, const DIGIT B[]);
 
 /*----------------------------------------------------------------------------*/
+

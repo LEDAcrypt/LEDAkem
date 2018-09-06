@@ -30,7 +30,6 @@
  *
  **/
 
-
 #include "bf_decoding.h"
 #include "gf2x_arith_mod_xPplusOne.h"
 #include <string.h>

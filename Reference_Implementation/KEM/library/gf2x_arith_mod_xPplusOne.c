@@ -35,7 +35,6 @@
 #include "rng.h"
 #include <string.h>  // memcpy(...), memset(...)
 #include <assert.h>
-
 /*----------------------------------------------------------------------------*/
 
 void gf2x_mod(DIGIT out[],
