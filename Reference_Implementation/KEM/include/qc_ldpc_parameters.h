@@ -39,31 +39,31 @@
 #define HASH_BYTE_LENGTH (32)
 // N0 defined in the makefile
 #if N0 == 2
-#define    P  (27779)  // modulus(x) = x^P-1
-#define    DV (17)  // odd number
-#define    M  (7)
-#define    M0 (4)
-#define    M1 (3)
-#define    NUM_ERRORS_T   (224)
+#define    P  (15013)  // modulus(x) = x^P-1
+#define    DV (9)  // odd number
+#define    M  (9)
+#define    M0 (5)
+#define    M1 (4)
+#define    NUM_ERRORS_T   (143)
 
 #elif N0 == 3
-#define    P  (18701)  // modulus(x) = x^P-1
-#define    DV (19)  // odd number
+#define    P  (9643)  // modulus(x) = x^P-1
+#define    DV (13)  // odd number
 #define    M  (7)
 #define    M0 (3)
 #define    M1 (2)
 #define    M2 (2)
-#define    NUM_ERRORS_T   (141)
+#define    NUM_ERRORS_T   (90)
 
 #elif N0 == 4
-#define    P  (17027)  // modulus(x) = x^P-1
-#define    DV (21)  // odd number
-#define    M  (7)
-#define    M0 (4)
-#define    M1 (1)
-#define    M2 (1)
-#define    M3 (1)
-#define    NUM_ERRORS_T   (112)
+#define    P  (8467)  // modulus(x) = x^P-1
+#define    DV (11)  // odd number
+#define    M  (9)
+#define    M0 (3)
+#define    M1 (2)
+#define    M2 (2)
+#define    M3 (2)
+#define    NUM_ERRORS_T   (72)
 
 #else
 #error "Unsupported number of circulant blocks"
@@ -86,31 +86,31 @@
 #define HASH_BYTE_LENGTH (48)
 // N0 defined in the makefile
 #if N0 == 2
-#define    P  (57557)  // 57503 modulus(x) = x^P-1
-#define    DV (17)  // odd number
-#define    M  (11)
-#define    M0 (6)
-#define    M1 (5)
-#define    NUM_ERRORS_T   (349)
+#define    P  (24533)  // 57503 modulus(x) = x^P-1
+#define    DV (13)  // odd number
+#define    M  (9)
+#define    M0 (5)
+#define    M1 (4)
+#define    NUM_ERRORS_T   (208)
 
 #elif N0 == 3
-#define    P  (41507)  // modulus(x) = x^P-1
-#define    DV (19)  // odd number
-#define    M  (11)
-#define    M0 (3)
-#define    M1 (4)
-#define    M2 (4)
-#define    NUM_ERRORS_T   (220)
-
-#elif N0 == 4
-#define    P  (35027)  // modulus(x) = x^P-1
-#define    DV (17)  // odd number
-#define    M  (13)
+#define    P  (17827)  // modulus(x) = x^P-1
+#define    DV (15)  // odd number
+#define    M  (9)
 #define    M0 (4)
 #define    M1 (3)
-#define    M2 (3)
-#define    M3 (3)
-#define    NUM_ERRORS_T   (175)
+#define    M2 (2)
+#define    NUM_ERRORS_T   (129)
+
+#elif N0 == 4
+#define    P  (14717)  // modulus(x) = x^P-1
+#define    DV (15)  // odd number
+#define    M  (9)
+#define    M0 (3)
+#define    M1 (2)
+#define    M2 (2)
+#define    M3 (2)
+#define    NUM_ERRORS_T   (104)
 
 #else
 #error "Unsupported number of circulant blocks"
@@ -135,31 +135,31 @@
 #define HASH_BYTE_LENGTH (64)
 // N0 defined in the makefile
 #if N0 == 2
-#define    P  (99053)  // modulus(x) = x^P-1
-#define    DV (19)  // odd number
+#define    P  (37619)  // modulus(x) = x^P-1
+#define    DV (11)  // odd number
 #define    M  (13)
 #define    M0 (7)
 #define    M1 (6)
-#define    NUM_ERRORS_T   (474)
+#define    NUM_ERRORS_T   (272)
 
 #elif N0 == 3
-#define    P  (72019)  // modulus(x) = x^P-1
-#define    DV (19)  // odd number
-#define    M  (15)
-#define    M0 (7)
+#define    P  (28477)  // modulus(x) = x^P-1
+#define    DV (13)  // odd number
+#define    M  (13)
+#define    M0 (5)
 #define    M1 (4)
 #define    M2 (4)
-#define    NUM_ERRORS_T   (301)
+#define    NUM_ERRORS_T   (172)
 
 #elif N0 == 4
-#define    P  (60509)  // modulus(x) = x^P-1
-#define    DV (23)  // odd number
+#define    P  (22853)  // modulus(x) = x^P-1
+#define    DV (13)  // odd number
 #define    M  (13)
 #define    M0 (4)
 #define    M1 (3)
 #define    M2 (3)
 #define    M3 (3)
-#define    NUM_ERRORS_T   (239)
+#define    NUM_ERRORS_T   (135)
 
 #else
 #error "Unsupported number of circulant blocks"
